@@ -17,7 +17,9 @@ jobs:
     - name: production build
       run: npm run build
     - name: publish to npm
-    - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+    - uses: actions/npm@master
+      with: 
+        args: "publish --access public"
+        secrets: ${{ secrets.NPM_AUTH_TOKEN }}
       env:
-        CI: true,
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        CI: true
