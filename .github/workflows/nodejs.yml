@@ -17,9 +17,5 @@ jobs:
     - name: production build
       run: npm run build
     - name: publish to npm
-    - uses: actions/npm@master
-      with: 
-        args: "publish --access public"
-        secrets: ${{ secrets.NPM_AUTH_TOKEN }}
       env:
         CI: true
