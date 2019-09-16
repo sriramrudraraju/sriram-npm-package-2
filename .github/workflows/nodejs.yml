@@ -16,6 +16,5 @@ jobs:
       run: npm install
     - name: production build
       run: npm run build
-    - name: publish to npm
       env:
         CI: true
