@@ -1,5 +1,5 @@
 {
-  "name": "sriram-add",
+  "name": "sriram-test",
   "version": "1.0.0",
   "description": "template for creating npm modules",
   "repository": {
@@ -15,8 +15,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/tsc",
-    "trypublish": "npm publish || true"
+    "build": "./node_modules/.bin/tsc"
   },
   "dependencies": {
     "react": "^16.9.0",
