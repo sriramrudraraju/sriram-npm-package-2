@@ -1,17 +1,16 @@
 {
-  "name": "npm-package-template",
+  "name": "sriram-add",
   "version": "1.0.0",
   "description": "template for creating npm modules",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sriramrudraraju/npm-package-template.git"
+    "url": "git+https://github.com/sriramrudraraju/sriram-npm-package-2"
   },
   "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sriramrudraraju/npm-package-template/issues"
+    "url": "https://github.com/sriramrudraraju/sriram-npm-package-2/issues"
   },
-  "homepage": "https://github.com/sriramrudraraju/npm-package-template#readme",
+  "homepage": "https://github.com/sriramrudraraju/sriram-npm-package-2#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
