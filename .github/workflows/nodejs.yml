@@ -18,12 +18,10 @@ jobs:
       run: npm run test
     - name: generating production build
       run: npm run build
-    - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
-    - name: publishing to npm    
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
