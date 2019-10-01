@@ -18,10 +18,12 @@ jobs:
       run: npm run test
     - name: production build
       run: npm run build
-    - name: npm publish
-      run: |
-        npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-        npm publish
+    - name: npm publish  
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        registry-url: https://registry.npmjs.org
+    - run: npm publish
       env:
         CI: true
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
