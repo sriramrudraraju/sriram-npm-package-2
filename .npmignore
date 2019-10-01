@@ -8,6 +8,7 @@ yarn-error.log*
 # git 
 .git
 .gitignore
+.github/
 
 # vsc code settings
 .vscode/
@@ -33,3 +34,5 @@ package-lock.json
 yarn.lock
 jest.config.json
 tsconfig.json
+jest.config.js
+npm/
