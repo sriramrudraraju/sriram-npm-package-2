@@ -18,9 +18,9 @@ jobs:
       run: npm run test
     - name: generating production build
       run: npm run build
-    - name: publishing to npm
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
+    - name: publishing to npm
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
