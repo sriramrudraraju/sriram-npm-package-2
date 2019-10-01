@@ -18,9 +18,11 @@ jobs:
       run: npm run test
     - name: production build
       run: npm run build
+    - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
-      registry-url: 'https://registry.npmjs.org'
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
     - run: npm install
     - run: npm publish
       env:
