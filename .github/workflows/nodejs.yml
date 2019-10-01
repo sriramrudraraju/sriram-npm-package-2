@@ -12,18 +12,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: install dependencies
+    - name: installing dependencies
       run: npm install
-    - name: unit tests
+    - name: running unit tests
       run: npm run test
-    - name: production build
+    - name: generating production build
       run: npm run build
+    - name: publishing to npm
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm install
     - run: npm publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
